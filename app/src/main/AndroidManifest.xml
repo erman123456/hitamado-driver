@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="pt.lunata.hitamado">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.READ_PHONE_STATE"
+        tools:node="remove" />
+
+    <application
+        android:name="pt.lunata.hitamado.Sjtapp"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="Default" />
+
+        <service
+            android:name="pt.lunata.hitamado.notif.fcm.MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name="pt.lunata.hitamado.ui.detail.airline.headdriver.DetailHeadDriverMaskapaiActivity" />
+        <activity android:name="pt.lunata.hitamado.ui.detail.airline.operasional.DetailOperasionalMaskapaiActivity" />
+        <activity android:name="pt.lunata.hitamado.ui.delegasi.search.deliverairline.SearchDelegasiDeliverAirlineActivity" />
+        <activity android:name="pt.lunata.hitamado.ui.delegasi.search.office.SearchDelegasiOfficeActivity" />
+        <activity android:name="pt.lunata.hitamado.ui.delegasi.search.pickup.SearchDelegasiPickupActivity" />
+        <activity android:name="pt.lunata.hitamado.ui.detail.deliverairline.headdriver.DetailHeadDriverDeliveryAirlineActivity" />
+        <activity android:name="pt.lunata.hitamado.ui.detail.deliverairline.driver.DetailDriverDeliveryAirlineActivity" />
+        <activity android:name="pt.lunata.hitamado.ui.detail.siapantar.headdriver.DetailSiapAntarHeadDriverActivity" />
+        <activity android:name="pt.lunata.hitamado.ui.detail.siapantar.driver.DetailSiapAntarDriverActivity" />
+        <activity android:name="pt.lunata.hitamado.ui.detail.office.headdriver.DetailHeadDriverOfficeActivity" />
+        <activity android:name="pt.lunata.hitamado.ui.detail.office.driver.DetailDriverOfficeActivity" />
+        <activity android:name="pt.lunata.hitamado.ui.delegasi.DelegasiActivity" />
+        <activity android:name="pt.lunata.hitamado.ui.detail.pickup.driver.DetailStatusPickupDriverActivity" />
+        <activity android:name="pt.lunata.hitamado.ui.detail.search.airline.SearchAirlineItemActivity" />
+        <activity android:name="pt.lunata.hitamado.ui.detail.search.deliverAirline.SearchDeliverAirlineItemActivity" />
+        <activity android:name="pt.lunata.hitamado.ui.detail.search.siapantar.SearchSiapantarItemActivity" />
+        <activity android:name="pt.lunata.hitamado.ui.detail.search.office.SearchOfficeItemActivity" />
+        <activity android:name="pt.lunata.hitamado.ui.detail.search.pickup.SearchPickupItemActivity" />
+        <activity android:name="pt.lunata.hitamado.MainActivity" />
+        <activity android:name="pt.lunata.hitamado.ui.detail.pickup.headdriver.DetailStatusPickupHeadDriverActivity" />
+        <activity android:name="pt.lunata.hitamado.ui.detail.newpo.DetailNewPoActivity" />
+        <activity
+            android:name="pt.lunata.hitamado.ui.detail.search.newpo.SearchNewpoItemActivity"
+            android:label="Search"
+            android:parentActivityName="pt.lunata.hitamado.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pt.lunata.hitamado.MainActivity" />
+        </activity>
+        <activity android:name="pt.lunata.hitamado.ui.login.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

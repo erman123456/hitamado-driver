@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "781113182610",
+    "firebase_url": "https://sjt-mobile.firebaseio.com",
+    "project_id": "sjt-mobile",
+    "storage_bucket": "sjt-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781113182610:android:16105fbcf7317be4e4594b",
+        "android_client_info": {
+          "package_name": "pt.lunata.hitamado"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "781113182610-8uqf5li3o0vllsfot5vdjke57cu5sosa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxGL2h2142bj7-tvRx0rPBbOWrvHzt5RI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "781113182610-8uqf5li3o0vllsfot5vdjke57cu5sosa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
