@@ -21,7 +21,7 @@ class ApiConfig {
         }
         fun getApiService(): ApiService {
             val retrofit = Retrofit.Builder()
-                .baseUrl("https://crm.hitamado.com/api")
+                .baseUrl("https://combine.hitamado.com/api/")
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .client(provideOkHttpClient())
                 .build()
